@@ -3,6 +3,7 @@
 Welcome to my repository for the **CodSoft Artificial Intelligence Internship**! This repository serves as a portfolio of the projects and tasks I completed during the internship program, showcasing practical applications of Machine Learning, Deep Learning, and AI concepts.
 
 
+
 ## 🚀 Projects Overview
 Here is the list of tasks assigned and completed during the internship:
 
