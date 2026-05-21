@@ -7,6 +7,7 @@ Welcome to my repository for the **CodSoft Artificial Intelligence Internship**!
 ## 🚀 Projects Overview
 Here is the list of tasks assigned and completed during the internship:
 
+
 ### 🔹 Task 1: Rule-Based Chatbot with Memory & Mood Detection
 * **Objective:** Built an advanced rule-based chatbot that remembers user information (name, age, hobbies), detects mood from conversation, and provides features like math solving, dictionary definitions, number guessing game, and chat history export.
 * **Tech Stack:** Python, Regex, JSON, Datetime
