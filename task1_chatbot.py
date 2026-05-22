@@ -310,7 +310,7 @@ def run_chatbot():
     os.system("cls" if os.name == "nt" else "clear")
     print(col("╔══════════════════════════════════════════════╗", C.BOT))
     print(col("║", C.BOT) + col("   🤖  RuleBot  —  CODSOFT AI Internship     ", C.BOLD) + col("║", C.BOT))
-    print(col("║", C.BOT) + col("        Advanced Rule-Based Chatbot           ", C.SYS)  + col("║", C.BOT))
+    print(col("║", C.BOT) + col("        Advanced Rule-Based Chatbot            ", C.SYS)  + col("║", C.BOT))
     print(col("╚══════════════════════════════════════════════╝", C.BOT))
     print(col("  Type 'help' to explore features  |  'bye' to exit\n", C.SYS))
 
