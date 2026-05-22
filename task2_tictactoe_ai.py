@@ -197,7 +197,7 @@ def main():
 
     print(col("╔════════════════════════════════════════════╗", C.TITLE))
     print(col("║", C.TITLE) + col("  🎮  Tic-Tac-Toe AI  —  CODSOFT Task 2     ", C.BOLD) + col("║", C.TITLE))
-    print(col("║", C.TITLE) + col("       Minimax + Alpha-Beta Pruning          ", C.SYS)  + col("║", C.TITLE))
+    print(col("║", C.TITLE) + col("       Minimax + Alpha-Beta Pruning         ", C.SYS)  + col("║", C.TITLE))
     print(col("╚════════════════════════════════════════════╝", C.TITLE))
     print(col(f"  You = {col('O', C.O)}   |   AI = {col('X', C.X)}", C.SYS))
 
