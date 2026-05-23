@@ -21,7 +21,7 @@ from pathlib import Path
 from io import BytesIO
 from datetime import datetime
 
-# ── Install check ──────────────────────────────────────────
+# ── Install check ───
 try:
     from transformers import AutoProcessor, AutoModelForCausalLM
     from PIL import Image
