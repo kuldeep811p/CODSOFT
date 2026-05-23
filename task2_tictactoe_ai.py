@@ -179,7 +179,7 @@ def play_one_game(difficulty, human_first):
 
     return result, history
 
-# ── Replay ─────────────────────────────────────────────────
+# ── Replay ───────────────────────────────────
 def show_replay(history):
     print(col("\n  📼 Game Replay:", C.SYS))
     board = make_board()
