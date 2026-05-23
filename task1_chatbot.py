@@ -18,7 +18,7 @@ New Features:
 import re, os, json, random, time
 from datetime import datetime
 
-# ── Terminal Colors ────────────────────────────────────────
+# ── Terminal Colors ──
 class C:
     RESET  = "\033[0m"
     BOLD   = "\033[1m"
@@ -31,7 +31,7 @@ class C:
 
 def col(text, color): return f"{color}{text}{C.RESET}"
 
-# ── Session Memory ─────────────────────────────────────────
+# ── Session Memory ───
 class Memory:
     def __init__(self):
         self.user_name       = None
@@ -62,7 +62,7 @@ class Memory:
 
 MEM = Memory()
 
-# ── Mini Dictionary ────────────────────────────────────────
+# ── Mini Dictionary ─────
 DICT = {
     "algorithm":       "A step-by-step procedure for solving a problem.",
     "api":             "Application Programming Interface — lets programs talk to each other.",
@@ -81,7 +81,7 @@ DICT = {
     "gradient descent":"An optimisation algorithm used to minimise error in ML models.",
 }
 
-# ── Mood Detection ─────────────────────────────────────────
+# ── Mood Detection ────
 POS = {"great","happy","love","awesome","good","excited","wonderful","fantastic","joy","glad","amazing","nice","cool","perfect","excellent"}
 NEG = {"sad","unhappy","bad","hate","awful","terrible","depressed","angry","frustrated","upset","bored","tired","stressed","anxious"}
 
@@ -91,7 +91,7 @@ def detect_mood(text):
     if len(words & NEG) > len(words & POS): return "negative"
     return "neutral"
 
-# ── Safe Math ──────────────────────────────────────────────
+# ── Safe Math ─────
 def safe_math(expr):
     expr = re.sub(r"[^0-9+\-*/(). %]", "", expr).strip()
     if not expr: return None
@@ -101,7 +101,7 @@ def safe_math(expr):
     except Exception:
         return None
 
-# ── Number Game ────────────────────────────────────────────
+# ── Number Game ──────
 def play_number_game():
     secret, attempts = random.randint(1, 100), 0
     print(col("\n🎮  Guess a number between 1 and 100! ('stop' to quit)", C.ACCENT))
@@ -120,7 +120,7 @@ def play_number_game():
         except ValueError:
             print(col("   Enter a valid integer.", C.WARN))
 
-# ── Handlers ───────────────────────────────────────────────
+# ── Handlers ─────
 def h_greet(m, t):
     MEM.topics.add("greeting")
     n = f", {MEM.user_name}" if MEM.user_name else ""
@@ -249,7 +249,7 @@ def h_whats_your_age(m, t):
 def h_capabilities(m, t):
     return h_help(m, t)
 
-# ── Rule Table ─────────────────────────────────────────────
+# ── Rule Table ─────
 RULES = [
     (r"\b(hello|hi|hey|howdy|hiya|sup)\b",                         h_greet),
     (r"\b(bye|goodbye|see you|cya|take care|quit|exit)\b",         h_bye),
@@ -298,14 +298,14 @@ def get_response(user_text):
     _fb_idx += 1
     return reply
 
-# ── Typing Effect ──────────────────────────────────────────
+# ── Typing Effect ──────
 def typewrite(text, delay=0.013):
     for ch in text:
         print(ch, end="", flush=True)
         time.sleep(delay)
     print()
 
-# ── Main ───────────────────────────────────────────────────
+# ── Main ──
 def run_chatbot():
     os.system("cls" if os.name == "nt" else "clear")
     print(col("╔══════════════════════════════════════════════╗", C.BOT))
